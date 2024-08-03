@@ -67,13 +67,13 @@ function HomeLayouts({children}){
                                     <Link to="/Login">Login</Link>
                                 </button>
                                 <button className="bg-gray-400 btn-secondary px-4 py-1 font-semibold rounded-md w-full">
-                                    <Link to="/Login">Signup</Link>
+                                    <Link to="/Signup">Signup</Link>
                                 </button>
                             </div>
 
                         </li>
                         )}
-                        {!isLoggedIn && (
+                        {isLoggedIn && (
                         <li className="absolute bottom-2 w-[90%]">
                             <div className="w-full flex items-center justify-center">
                                 <button className="bg-gray-400 btn-primary px-4 py-1 font-semibold rounded-md w-full">
