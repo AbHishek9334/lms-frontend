@@ -53,6 +53,20 @@ function HomeLayouts({children}){
                             <Link to="/">Home</Link>
 
                         </li>
+                        {isLoggedIn && role=="ADMIN" && (
+                            <li>
+                                <Link to="/admin/dashboard">Admin Dashboard
+                                
+                                </Link>
+                            </li>
+                        )}
+                        {isLoggedIn && role=="ADMIN" && (
+                            <li>
+                                <Link to="/course/create">Create new course
+                                
+                                </Link>
+                            </li>
+                        )}
                         <li>
                             <Link to="/courses">All courses</Link>
                         </li>
