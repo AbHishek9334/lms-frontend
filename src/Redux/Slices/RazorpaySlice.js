@@ -57,7 +57,7 @@ export const getPaymentRecord=createAsyncThunk("/payments/record",async(data)=>{
         toast.error("operation failed")
     }
 })
-export const cancelCourseBundle=createAsyncThunk("/payments/cancel",async(data)=>{
+export const cancelCourseBundle=createAsyncThunk("/payments/cancel",async()=>{
     try{
         const response= axiosInstance.post("/payments/unsubscribe")
         toast.promise(response,{
