@@ -26,7 +26,7 @@ function Displaylectures(){
                 <div className="text-center text-2xl font-semibold text-yellow-500">
                     CourseName:{state?.title}
                 </div>
-                {lectures && lectures.length>0 && (<div className="flex justify-center gap-10 w-full">
+                {lectures && lectures.length>0 ? (<div className="flex justify-center gap-10 w-full">
                     <div className="space-y-5 w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black]">
                         <video src={lectures && lectures[currentVedio]?.lecture?.secure_url} 
                                 className="object-fill rounded-tl-lg rounded-tr-lg w-full"
@@ -78,7 +78,14 @@ function Displaylectures(){
                             )
                         })}
                     </ul>
-                </div>)}
+                </div>):(
+                    role=="ADMIN" && (
+                        <button onClick={()=>navigate("/course/addLecture",{state:{...state}})} className="btn-primary border bg-blue-500 px-2 py-1 text-white rounded-md font-semibold text-sm">
+                            Add new Lecture
+                        </button>
+                    )
+
+                )}
             </div>
 
         </HomeLayouts>

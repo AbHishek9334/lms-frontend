@@ -1,7 +1,7 @@
 {
   "name": "lms-frontend",
   "private": true,
-  "proxy":"hhtps://localhost:5002",
+  "proxy": "hhtps://localhost:5002",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
