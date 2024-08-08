@@ -28,14 +28,14 @@ function Displaylectures(){
                 </div>
                 {lectures && lectures.length>0 && (<div className="flex justify-center gap-10 w-full">
                     <div className="space-y-5 w-[28rem] p-2 rounded-lg shadow-[0_0_10px_black]">
-                        <vedio src={lectures && lectures[currentVedio]?.lecture?.secure_url} 
+                        <video src={lectures && lectures[currentVedio]?.lecture?.secure_url} 
                                 className="object-fill rounded-tl-lg rounded-tr-lg w-full"
                                 controls
                                 disablePictureInPicture
                                 muted
                                 controlsList="nodownload">
 
-                        </vedio>
+                        </video>
                         <div>
                             <h1>
                                 <span className="text-yellow-500">Title:{" "}
